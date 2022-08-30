@@ -448,6 +448,11 @@ cssesc@^3.0.0:
   resolved "https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
 
+draw2d-types@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/draw2d-types/-/draw2d-types-1.0.3.tgz#5fef574077bbb28fa2abc1aa1287a19843320702"
+  integrity sha512-vn8K1/ZaycvR1BQjUQvhi1CGI9HoeYrvB2W4HX1inBYm7V1CXGHfnt4EKoanPgnljIIb+EjfEfXRnWurUgoJcQ==
+
 draw2d@^1.0.38:
   version "1.0.38"
   resolved "https://registry.npmjs.org/draw2d/-/draw2d-1.0.38.tgz"
