@@ -1,15 +1,21 @@
-const {resolve} = require("path");
+const path = require('path');
 const {ProvidePlugin} = require("webpack");
 
 module.exports = {
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js']
+    },
 	entry: "./src/index.js",
-	output: {
-		filename: "bundle.js",
-		path: resolve(__dirname, "dist"),
-		publicPath: "dist/"
-	},
+	mode: 'development',
+	devtool: 'inline-source-map',
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/dist/'
+    },
 	module: {
 		rules: [
+			{ test: /\.ts?$/, loader: 'ts-loader' },
 			{
 				test: /\.css$/,
 				use: ["style-loader", "css-loader"]
@@ -28,6 +34,12 @@ module.exports = {
 			}
 		]
 	},
+    devServer: {
+        static: {
+            directory: __dirname,
+        },
+        compress: true
+    },
 	plugins: [
 		new ProvidePlugin({
 			$: "jquery",
