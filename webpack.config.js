@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {ProvidePlugin} = require("webpack");
 
 module.exports = {
@@ -11,7 +12,6 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/dist/'
     },
 	module: {
 		rules: [
@@ -35,16 +35,15 @@ module.exports = {
 		]
 	},
     devServer: {
-        static: {
-            directory: __dirname,
-        },
-        compress: true
     },
 	plugins: [
 		new ProvidePlugin({
 			$: "jquery",
 			jQuery: "jquery",
 			"window.jQuery": "jquery"
-		})
+		}),
+		new HtmlWebpackPlugin({
+			template: "index.html",
+		}),
 	]
 }

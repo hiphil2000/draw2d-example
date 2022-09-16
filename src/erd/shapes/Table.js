@@ -1,5 +1,4 @@
 import draw2d from "draw2d";
-import { Padding } from "../../utils";
 import Entity from "./Entity";
 
 const Table = draw2d.shape.layout.VerticalLayout.extend({
@@ -21,9 +20,6 @@ const Table = draw2d.shape.layout.VerticalLayout.extend({
 			text: attr.name,
 			resizeable: true,
 			width: 225
-			// fontSize: "15px",
-			// stroke: 0,
-			// width: "100px"
 		});
 		this.add(label);
 	},
